@@ -67,4 +67,4 @@ endmodule
 
 **RESULTS**
 
-Thus the progarm for a 4 bit synchronous up counter is implemented correctly
+Thus the progarm for a 4 bit synchronous up counter is implemented correctly.
