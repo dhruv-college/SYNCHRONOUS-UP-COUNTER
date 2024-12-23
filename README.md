@@ -28,19 +28,43 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+1. Initialize the shift register to a known state (e.g., all zeros).
+2. Input a bit serially into the shift register.
+3. Shift the contents of the register one position to the right (or left).
+4. Output the shifted bit from the last stage of the register.
+5. Repeat steps 2-4 for each bit you want to input and shift.
 
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
-
-Developed by: RegisterNumber:
-*/
-
+```
+Program for flipflops and verify its truth table in quartus using Verilog programming. 
+Developed by:Dhruv.D
+RegisterNumber:24900416
+```
+```
+module ex11(out,clk,rstn);
+input clk,rstn;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(!rstn)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
+```
 **RTL LOGIC UP COUNTER**
+
+![RTL logic up counter](https://github.com/user-attachments/assets/3bd2ca47-a1d5-4084-978c-d00ab7652078)
 
 **TIMING DIAGRAM FOR IP COUNTER**
 
+![Timing diagram for up counter](https://github.com/user-attachments/assets/13fabafc-fe0e-435d-a1f4-928e46e62975)
+
 **TRUTH TABLE**
 
+![Truth Table](https://github.com/user-attachments/assets/5cdf0794-c63c-4072-8a5f-250db9d7813f)
+
 **RESULTS**
+
+Thus the progarm for a 4 bit synchronous up counter is implemented correctly
